@@ -27,11 +27,14 @@ const NavigationBar = () => {
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2  lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <NavLink to={"/"}>Home</NavLink>
-      <NavLink to={"/"}>Contact Us</NavLink>
-      <NavLink to={"/"}>Dashboard</NavLink>
-      <NavLink to={"/menu"}>Our Menu</NavLink>
-      <NavLink to={"/order/salad"}>Order Food</NavLink>
-      <NavLink to={"/dashboard/cart"}>
+      <NavLink to={"/addArticle"}>Add Article</NavLink>
+      <NavLink to={"/allArticle"}>All Articles
+      </NavLink>
+      <NavLink to={"/subscription"}>Subscription
+      </NavLink>
+      <NavLink to={"/dashboard"}>Dashboard</NavLink>
+      <NavLink to={"/myArticle"}>My Articles</NavLink>
+      <NavLink to={"/"}>
         <Badge content={cart.length}>
         <FaCartShopping className="h-6 w-6 "  />
         </Badge>
