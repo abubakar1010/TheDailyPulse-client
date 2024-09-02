@@ -5,6 +5,10 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 
+// console.log("firebase api config",import.meta.env.VITE_APPID);
+
+
+
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_APIKEY,
   authDomain: import.meta.env.VITE_AUTHDOMAIN,
