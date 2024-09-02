@@ -25,6 +25,41 @@ const AllUsers = () => {
 
   const TABLE_HEAD = ["", "Name", "Email", "Role", "Action"];
 
+  const handleMakeAdmin = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, make admin!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.patch(`/users/admin/${id}`)
+        .then((res) => {
+          if (res.data.modifiedCount > 0) {
+            Swal.fire({
+              title: "Updated!",
+              text: "User has been modified to admin.",
+              icon: "success",
+            });
+            refetch();
+          }
+        })
+        .catch(() => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Update failed. Something went wrong! ",
+            footer: 'please try again'
+          });
+          
+        })
+      }
+    });
+  };
+
 
 
   return (
