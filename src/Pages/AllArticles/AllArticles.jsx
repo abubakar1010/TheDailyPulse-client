@@ -16,7 +16,7 @@ const AllArticles = () => {
     return (
         <div className=" grid grid-cols-2 justify-center items-center my-12 gap-12">
             {
-                news.map( ({_id,image, publisher, title, description}) => <ArticleCard key={_id} image={image} publisher={publisher} title={title} description={description} />)
+                news.map( (item) => <ArticleCard key={item?._id} item={item} />)
             }
         </div>
     );

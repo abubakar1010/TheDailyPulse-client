@@ -7,12 +7,14 @@ import {
   } from "@material-tailwind/react";
 
   import PropTypes from 'prop-types'
+import { Link } from "react-router-dom";
 
 
-const ArticleCard = (item) => {
+const ArticleCard = ({item}) => {
 
-
-    const {image,title, publisher, description} = item;
+    console.log(item);
+    
+    const {_id,image,title, publisher, description} = item;
     return (
         <>
             <div>
@@ -37,7 +39,7 @@ const ArticleCard = (item) => {
           <Typography color="gray" className="mb-8 font-normal ">
             {description.slice(0,200)} ........
           </Typography>
-          <a href="#" className="inline-block">
+          <Link to={`/news/${_id}`} className="inline-block">
             <Button variant="text" className="flex items-center gap-2">
               Details
               <svg
@@ -55,7 +57,7 @@ const ArticleCard = (item) => {
                 />
               </svg>
             </Button>
-          </a>
+          </Link>
         </CardBody>
       </Card>
             </div>
