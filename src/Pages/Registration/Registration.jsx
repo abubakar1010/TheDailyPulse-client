@@ -31,12 +31,20 @@ const Registration = () => {
   const onSubmit = (data) => {
     const {email, password, name, imgURL}  = data;
     createUser(email, password)
-    .then( () => {
+    .then( (res) => {
+      // console.log("from reg page ------> ", res);
 
       updateUser(name, imgURL)
       .then( () => {
-
-        const userInfo = {name, email }
+        
+        // const userInfo = {name, email }
+        const userInfo = { 
+          name,
+          email,
+          image: imgURL,
+          lastLogin: res.user?.metadata.lastSignInTime,
+          role: "user",
+        }
 
         axiosPublic.post('/users',userInfo)
         .then( () => {
@@ -74,30 +82,6 @@ const Registration = () => {
       
     })
   }
-  // const {register} = useContext(AuthContext)
-
-  // const handleRegister = (e) => {
-  //   e.preventDefault();
-  //   const form = e.target;
-
-    
-  //   const name = form.name.value;
-  //   const email = form.email.value;
-  //   const password = form.password.value;
-
-  //   const userInfo = { email, password, name };
-  //   console.log(userInfo);
-  //   register(email, password)
-  //   .then( res => {
-  //     console.log(res.user);
-      
-  //   })
-  //   .catch( error => {
-  //     console.log(error);
-      
-  //   })
-
-  // };
 
 
     return (
@@ -174,9 +158,6 @@ const Registration = () => {
               size="lg"
               placeholder="********"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-              // labelProps={{
-              //   className: "before:content-none after:content-none",
-              // }}
             />
              {errors.password?.type === "required" && (
         <p className=" text-lg text-red-600">Password is required</p>
