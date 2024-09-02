@@ -39,7 +39,7 @@ const ArticleCard = ({item}) => {
           <Typography color="gray" className="mb-8 font-normal ">
             {description.slice(0,200)} ........
           </Typography>
-          <Link to={`/news/${_id}`} className="inline-block">
+          <Link to={`/articleDetails/${_id}`} className="inline-block">
             <Button variant="text" className="flex items-center gap-2">
               Details
               <svg
