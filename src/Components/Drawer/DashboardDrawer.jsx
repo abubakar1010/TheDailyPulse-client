@@ -55,7 +55,7 @@ const DashboardDrawer = () => {
             ADD PUBLISHER
           </ListItem>
           </NavLink>
-          <NavLink to={"/dashboard/allPublisher"}>
+          <NavLink to={"/dashboard/allArticles"}>
           <ListItem>
             <ListItemPrefix>
             <FaBook className=" text-xl" />
