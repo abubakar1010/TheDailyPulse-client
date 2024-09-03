@@ -47,7 +47,7 @@ const DashboardDrawer = () => {
             ALL USER
           </ListItem>
           </NavLink>
-          <NavLink to={"/dashboard/manageItems"}>
+          <NavLink to={"/dashboard/addPublisher"}>
           <ListItem>
             <ListItemPrefix>
             <FaLeanpub className=" text-xl" />
