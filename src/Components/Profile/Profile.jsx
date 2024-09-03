@@ -6,13 +6,13 @@ import {
     Avatar,
     Typography,
   } from "@material-tailwind/react";
-import { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import useAuth from "../../Hooks/UseAuth/useAuth";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
 
-  const {logout, user} = useContext(AuthContext)
+  const {logout, user} = useAuth()
   const handleLogout = () => {
     logout()
     .then( () => {
@@ -46,6 +46,7 @@ const Profile = () => {
           />
         </MenuHandler>
         <MenuList>
+          <Link to={"/myProfile"}>
           <MenuItem className="flex items-center gap-2">
             <svg
               width="16"
@@ -66,6 +67,7 @@ const Profile = () => {
               My Profile
             </Typography>
           </MenuItem>
+          </Link>
           <MenuItem className="flex items-center gap-2">
             <svg
               width="16"
