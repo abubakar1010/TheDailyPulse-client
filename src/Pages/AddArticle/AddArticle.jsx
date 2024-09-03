@@ -49,7 +49,7 @@ const AddArticle = () => {
     { value: 'Washington Post', label: 'Washington Post' },
   ];
 
-  console.log(tagsOption, publisherOption);
+  // console.log(tagsOption, publisherOption);
 
 
 
@@ -92,7 +92,7 @@ const AddArticle = () => {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "Item has been saved",
+          title: "Item has been Added",
           showConfirmButton: false,
           timer: 1500
         });
