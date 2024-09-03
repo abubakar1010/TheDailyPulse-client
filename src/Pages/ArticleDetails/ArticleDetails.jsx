@@ -10,7 +10,7 @@ const ArticleDetails = () => {
 
     return (
         <div>
-            <ArticleDetailsCard item={data} />
+            <ArticleDetailsCard item={data.result} />
         </div>
     );
 };
