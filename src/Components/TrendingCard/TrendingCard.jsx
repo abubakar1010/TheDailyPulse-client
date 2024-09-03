@@ -13,12 +13,12 @@ import {
   const TrendingCard = ({ item }) => {
     console.log(item);
   
-    const { _id, image, title, publisher, description, isTrending } = item;
+    const { _id, image, title, publisher, description } = item;
     return (
       <>
         <div>
           <Card
-            className={`w-full max-w-[48rem] flex ${isTrending} h-full`}
+            className={`w-full max-w-[48rem] flex  h-full`}
           >
             <CardHeader
               shadow={false}
@@ -32,7 +32,7 @@ import {
                 {publisher}
               </Typography>
               <Typography variant="h4" color="blue-gray" className="mb-4">
-                {title}
+                {title.slice(0, 80)} ......
               </Typography>
               <Typography color="gray" className="mb-8 font-normal ">
                 {description.slice(0, 200)} ........

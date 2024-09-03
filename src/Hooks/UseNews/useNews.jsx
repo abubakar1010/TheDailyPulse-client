@@ -7,7 +7,7 @@ const useNews = () => {
     const [loader, setLoader] = useState(true)
 
   useEffect(() => {
-    axios.get('http://localhost:5000/news')
+    axios.get('http://localhost:5000/news/status')
     .then( res => {
       setNews(res.data)
       setLoader(false)
