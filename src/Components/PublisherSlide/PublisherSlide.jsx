@@ -28,13 +28,15 @@ const PublisherSlide = () => {
       <div className=" my-24">
       <Swiper
 
+      slidesPerGroup={(publisher.length / 2)}
+
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
         }}
         watchSlidesProgress={false}
         loop={true}
-        speed={3000}
+        speed={5200}
         slidesPerView={3}
         new
         modules={[Autoplay]}
