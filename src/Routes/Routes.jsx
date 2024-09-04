@@ -15,9 +15,9 @@ import UserArticles from "../Pages/Dashboard/AdminDashboard/UsersArticles/UsersA
 import AddPublisher from "../Pages/Dashboard/AdminDashboard/AddPublisher/AddPublisher";
 import MyProfile from "../Pages/MyProfile/MyProfile";
 import MyArticles from "../Pages/MyArticles/MyArticles";
-import UpdateArticle from "../Pages/UpdateArticle/updateArticle";
 import PaymentCard from "../Components/PaymentCard/PaymentCard";
 import PremiumArticle from "../Pages/PremiumArticles/PremiumArticles";
+import UpdateArticle from "../Pages/UpdateArticle/UpdateArticle";
 
 const router = createBrowserRouter([
     {
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/payment",
-          element: <PaymentCard />
+          element: <PrivateRoute><PaymentCard /></PrivateRoute>
         },
         
         {
@@ -60,19 +60,19 @@ const router = createBrowserRouter([
         },
         {
           path: '/myProfile',
-          element: <MyProfile />
+          element: <PrivateRoute><MyProfile /></PrivateRoute>
         },
         {
           path: '/myArticles',
-          element: <MyArticles />
+          element: <PrivateRoute><MyArticles /></PrivateRoute>
         },
         {
           path: '/updateArticle/:id',
-          element: <UpdateArticle />
+          element: <PrivateRoute><UpdateArticle /></PrivateRoute>
         },
         {
           path: '/premiumArticles',
-          element: <PremiumArticle />
+          element: <PrivateRoute><PremiumArticle /></PrivateRoute>
         },
 
       ]

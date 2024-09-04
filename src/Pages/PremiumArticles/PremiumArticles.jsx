@@ -1,17 +1,17 @@
 
 import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import TrendingCard from "../../Components/TrendingCard/TrendingCard";
+import useAxiosSecure from "../../Hooks/useaxiosSecure/useaxiosSecure";
 
 
 const PremiumArticle = () => {
 
-    const axiosPublic =  useAxiosPublic()
+    const axiosSecure =  useAxiosSecure()
 
     const { data: news = [] } = useQuery({
         queryKey: ["news"],
         queryFn: async () => {
-          const result = await axiosPublic.get("/news/premium");
+          const result = await axiosSecure.get("/news/premium");
           return result.data;
         },
       });

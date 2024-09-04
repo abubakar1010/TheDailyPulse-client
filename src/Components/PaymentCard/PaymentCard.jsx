@@ -13,8 +13,8 @@ import {
   LockClosedIcon,
 } from "@heroicons/react/24/solid";
 import useAuth from "../../Hooks/UseAuth/useAuth";
-import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../Hooks/useaxiosSecure/useaxiosSecure";
  
 
  
@@ -28,7 +28,7 @@ const PaymentCard = () => {
 
   const { countries } = useCountries();
   const {user} = useAuth()
-  const axiosPublic = useAxiosPublic()
+  const axiosSecure = useAxiosSecure()
 
    const handlePayment = (e) => {
 
@@ -38,7 +38,7 @@ const PaymentCard = () => {
     if(email === user?.email){
       console.log("matched--------------->");
 
-      axiosPublic.patch(`users/payment/${email}`)
+      axiosSecure.patch(`users/payment/${email}`)
       .then((res) => {
 
         if(res.data.modifiedCount){

@@ -10,7 +10,7 @@ const Statistic = () => {
     const { data: users = [] } = useQuery({
         queryKey: ["users"],
         queryFn: async () => {
-          const result = await axiosPublic.get("/users/length");
+          const result = await axiosPublic.get("/length");
           return result.data;
         },
       });

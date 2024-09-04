@@ -151,9 +151,9 @@ const Registration = () => {
               }}
               {...register("password",{
                  required: true,
-                   minLength: 8,
+                   minLength: 6,
                     maxLength: 20, 
-                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*%?^])(?=.*[0-9])(?=.*[a-z])/
+                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*%?^])(?=.*[0-9])/
                    })}
               size="lg"
               placeholder="********"
@@ -163,13 +163,13 @@ const Registration = () => {
         <p className=" text-lg text-red-600">Password is required</p>
       )}
              {errors.password?.type === "minLength" && (
-        <p className=" text-lg text-red-600">Password must required Minimum 8 character</p>
+        <p className=" text-lg text-red-600">Password must required Minimum 6 character</p>
       )}
              {errors.password?.type === "maxLength" && (
-        <p className=" text-lg text-red-600">Password must be less than 10 character</p>
+        <p className=" text-lg text-red-600">Password must be less than 20 character</p>
       )}
              {errors.password?.type === "pattern" && (
-        <p className=" text-lg text-red-600"> Password at least have one uppercase letter, one lowercase letter, one number and one special character</p>
+        <p className=" text-lg text-red-600"> Password at least have one uppercase letter, one number and one special character</p>
       )}
 
 

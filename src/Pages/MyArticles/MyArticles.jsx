@@ -11,14 +11,14 @@ import {
   Spinner,
 } from "@material-tailwind/react";
 import { Helmet } from "react-helmet-async";
-import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import { Link } from "react-router-dom";
 import { PencilIcon } from "@heroicons/react/16/solid";
 import Swal from "sweetalert2";
 import useUserArticle from "../../Hooks/useUserArticle/useUserArticle";
+import useAxiosSecure from "../../Hooks/useaxiosSecure/useaxiosSecure";
 
 const MyArticles = () => {
-    const axiosPublic = useAxiosPublic()
+    const axiosSecure = useAxiosSecure()
 
     const [article, refetch, isPending] = useUserArticle()
 
@@ -48,7 +48,7 @@ const MyArticles = () => {
           }).then((result) => {
             if (result.isConfirmed) {
             
-            axiosPublic.delete(`/news/${id}`)
+            axiosSecure.delete(`/news/${id}`)
             .then( res => {
                 if (res.data.deletedCount > 0) {
                        Swal.fire({

@@ -7,7 +7,7 @@ import {
   import { useForm } from "react-hook-form";
   import Swal from "sweetalert2";
 import useAxiosPublic from "../../../../Hooks/useAxiosPublic/useAxiosPublic";
-import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
+import useAxiosSecure from "../../../../Hooks/useaxiosSecure/useaxiosSecure";
   
   const image_hoisting_key = import.meta.env.VITE_IMAGE_HOISTING_KEY;
   const image_upload_api = `https://api.imgbb.com/1/upload?key=${image_hoisting_key}`;

@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "../UseAuth/useAuth";
-import useAxiosSecure from "../useAxiosSecure/useAxiosSecure";
+
 import { Spinner } from "@material-tailwind/react";
+import useAxiosSecure from "../useaxiosSecure/useaxiosSecure";
 
 const useAdmin = () => {
 
