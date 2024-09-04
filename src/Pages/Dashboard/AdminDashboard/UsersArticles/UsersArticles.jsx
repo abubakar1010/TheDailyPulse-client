@@ -47,13 +47,47 @@ const UserArticles = () => {
 
   }
 
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.delete(`/news/${id}`).then((res) => {
+          if (res.data.deletedCount > 0) {
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your Article has been deleted.",
+              icon: "success",
+            });
+            refetch();
+          }
+        })
+        .catch(() => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Delete Failed. Something went wrong! ",
+            footer: 'please try again'
+          });
+          
+        })
+      }
+    });
+  };
+
 
 
 
   return (
     <>
       <div className=" w-full space-y-8">
-        {news.map( (element) => <UserArticleCard element={element} key={element._id} handleApproved={handleApproved} /> )}
+        {news.map( (element) => <UserArticleCard element={element} key={element._id} handleApproved={handleApproved} handleDelete={handleDelete} /> )}
       </div>
     </>
   );
