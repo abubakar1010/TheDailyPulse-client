@@ -11,26 +11,19 @@ import {
   Spinner,
 } from "@material-tailwind/react";
 import { Helmet } from "react-helmet-async";
-import useAuth from "../../Hooks/UseAuth/useAuth";
 import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import { Link } from "react-router-dom";
 import { PencilIcon } from "@heroicons/react/16/solid";
-import { useQuery } from "@tanstack/react-query";
 import Swal from "sweetalert2";
+import useUserArticle from "../../Hooks/useUserArticle/useUserArticle";
 
 const MyArticles = () => {
-    const {user} = useAuth()
     const axiosPublic = useAxiosPublic()
 
+    const [article, refetch, isPending] = useUserArticle()
 
 
-    const { data: article = [], refetch, isPending } = useQuery({
-      queryKey: ["article"],
-      queryFn: async () => {
-        const result = await axiosPublic.get(`/news/user/${user?.email}`);
-        return result.data;
-      },
-    });
+
 
     if (isPending)
       return (
@@ -167,12 +160,14 @@ const MyArticles = () => {
                         <p className=" text-center w-max m-auto">Details</p>
                       </Link>
                       </td>
-                      <td className={classes}>
-                      <Tooltip content="Edit User">
+                      <td className={` text-center ${classes}`}>
+                      <Link to={`/updateArticle/${_id}`}>
+                      <Tooltip content="Edit Articles">
                         <IconButton variant="text">
                           <PencilIcon className="h-4 w-4" />
                         </IconButton>
                       </Tooltip>
+                      </Link>
                     </td>
                       <td
                         onClick={() => handleDelete(_id)}
