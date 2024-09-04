@@ -15,6 +15,7 @@ import UserArticles from "../Pages/Dashboard/AdminDashboard/UsersArticles/UsersA
 import AddPublisher from "../Pages/Dashboard/AdminDashboard/AddPublisher/AddPublisher";
 import MyProfile from "../Pages/MyProfile/MyProfile";
 import MyArticles from "../Pages/MyArticles/MyArticles";
+import UpdateArticle from "../Pages/UpdateArticle/updateArticle";
 
 const router = createBrowserRouter([
     {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
         {
           path: '/myArticles',
           element: <MyArticles />
+        },
+        {
+          path: '/updateArticle/:id',
+          element: <UpdateArticle />
         },
 
       ]

@@ -33,13 +33,13 @@ const Plans = () => {
   return (
     <div className=" flex items-center gap-12 my-24">
       <SubscriptionCard
-        item={{ type: "Basic", features: basicPremium, duration:{value: 1} }}
+        item={{ type: "Basic", features: basicPremium, price: 29, duration:{value: 1}, isNavigate: true }}
       />
       <SubscriptionCard
-        item={{ type: "standard", features: standardPremium, duration:{value: 5} }}
+        item={{ type: "Premium", features: standardPremium, duration:{value: 1}, price: 399, isNavigate: true }}
       />
       <SubscriptionCard
-        item={{ type: "Plus", features: premiumPlus, duration:{value: 10} }}
+        item={{ type: "Premium Plus", features: premiumPlus, duration:{value: 1}, price: 699, isNavigate: true }}
       />
     </div>
   );

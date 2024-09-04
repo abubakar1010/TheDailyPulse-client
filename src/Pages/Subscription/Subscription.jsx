@@ -7,18 +7,21 @@ import Select from "react-select";
 import { Typography } from "@material-tailwind/react";
 
 const Subscription = () => {
-  const premiumFeatures = [
-    "Unlimited access on the web and in our apps",
-    "Unlimited Posts",
-    "Get All Premium News",
-    "Most comprehensive political and international coverage",
+  const basicPremium = [
+    "Ad-Free Reading",
+    "Early Access to Articles",
+    "Personalized News Feed",
   ];
-
-  const standardFeatures = [
-    "Unlimited access on the web and in our apps",
-    "24/7 live news updates",
-    "Interactive stories",
-    "political and international coverage",
+  const standardPremium = [
+    "All Basic Features",
+    "Exclusive In-Depth Reports",
+    "Offline Reading",
+  ];
+  const premiumPlus = [
+    "All Standard Features",
+    "Priority Customer Support",
+    "Invitations to Webinars and Events",
+    "Customizable Alerts",
   ];
 
   const [duration, setDuration] = useState({ value: 1 });
@@ -47,12 +50,16 @@ const Subscription = () => {
         />
       </div>
       <div className=" flex justify-center items-center gap-24 ">
-        <SubscriptionCard
-          item={{ type: "standard", features: standardFeatures, duration }}
-        />
-        <SubscriptionCard
-          item={{ type: "premium", features: premiumFeatures, duration }}
-        />
+
+         <SubscriptionCard
+        item={{ type: "Basic", price: 29, features: basicPremium, duration, isNavigate: false }}
+      />
+      <SubscriptionCard
+        item={{ type: "Premium", price: 299, features: standardPremium, duration, isNavigate: false }}
+      />
+      <SubscriptionCard
+        item={{ type: "Premium Plus", price: 699, features: premiumPlus, duration, isNavigate: false }}
+      />
       </div>
     </>
   );
