@@ -16,6 +16,7 @@ import AddPublisher from "../Pages/Dashboard/AdminDashboard/AddPublisher/AddPubl
 import MyProfile from "../Pages/MyProfile/MyProfile";
 import MyArticles from "../Pages/MyArticles/MyArticles";
 import UpdateArticle from "../Pages/UpdateArticle/updateArticle";
+import PaymentCard from "../Components/PaymentCard/PaymentCard";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         {
           path: "/subscription",
           element: <PrivateRoute><Subscription /></PrivateRoute>
+        },
+        {
+          path: "/payment",
+          element: <PaymentCard />
         },
         
         {

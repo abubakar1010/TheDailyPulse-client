@@ -31,7 +31,8 @@
     "react-simple-captcha": "^9.3.1",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.12.4",
-    "swiper": "^11.1.12"
+    "swiper": "^11.1.12",
+    "use-react-countries": "^2.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

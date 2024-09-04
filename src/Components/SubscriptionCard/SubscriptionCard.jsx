@@ -87,6 +87,7 @@ const SubscriptionCard = ({ item }) => {
               </Button>
             </Link>
           ) : (
+            <Link to={"/payment"}>
             <Button
               size="lg"
               color="white"
@@ -96,6 +97,7 @@ const SubscriptionCard = ({ item }) => {
             >
               Subscribe Now
             </Button>
+            </Link>
           )}
         </CardFooter>
       </Card>
