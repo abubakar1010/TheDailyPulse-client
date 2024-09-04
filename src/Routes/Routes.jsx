@@ -17,6 +17,7 @@ import MyProfile from "../Pages/MyProfile/MyProfile";
 import MyArticles from "../Pages/MyArticles/MyArticles";
 import UpdateArticle from "../Pages/UpdateArticle/updateArticle";
 import PaymentCard from "../Components/PaymentCard/PaymentCard";
+import PremiumArticle from "../Pages/PremiumArticles/PremiumArticles";
 
 const router = createBrowserRouter([
     {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
         {
           path: '/updateArticle/:id',
           element: <UpdateArticle />
+        },
+        {
+          path: '/premiumArticles',
+          element: <PremiumArticle />
         },
 
       ]
