@@ -4,6 +4,7 @@ import {
   Button,
   Typography,
   Textarea,
+  Spinner,
 } from "@material-tailwind/react";
 import { useForm } from "react-hook-form";
 
@@ -15,6 +16,8 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import useAxiosSecure from "../../Hooks/useAxiosSecure/useAxiosSecure";
 import { useState } from "react";
 import useAuth from "../../Hooks/UseAuth/useAuth";
+import usePublisher from "../../Hooks/usePublisher/usePublisher";
+import moment from "moment";
 
 const image_hoisting_key = import.meta.env.VITE_IMAGE_HOISTING_KEY;
 const image_upload_api = `https://api.imgbb.com/1/upload?key=${image_hoisting_key}`;
@@ -25,6 +28,10 @@ const AddArticle = () => {
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
   const {user} = useAuth();
+  const [publisher,loader] = usePublisher()
+
+  // console.log(publisher);
+  
 
   const {
     register,
@@ -39,15 +46,38 @@ const AddArticle = () => {
   const [publisherOption, setPublisherOption] = useState(null);
 
   const tagsOptions = [
-    { value: 'Politics', label: 'Polictics' },
+    { value: 'Breaking News', label: 'Breaking News' },
+    { value: 'Politics', label: 'Politics' },
+    { value: 'World News', label: 'World News' },
+    { value: 'Economy', label: 'Economy' },
+    { value: 'Business', label: 'Business' },
+    { value: 'Technology', label: 'Technology' },
+    { value: 'Science', label: 'Science' },
     { value: 'Health', label: 'Health' },
-    { value: 'Internationals', label: 'Internationals' },
-  ];
-  const publisherOptions = [
-    { value: 'Al Jazeera', label: 'Al Jazeera' },
-    { value: 'New York Times', label: 'New York Times' },
-    { value: 'Washington Post', label: 'Washington Post' },
-  ];
+    { value: 'Entertainment', label: 'Entertainment' },
+    { value: 'Sports', label: 'Sports' },
+    { value: 'Environment', label: 'Environment' },
+    { value: 'World News', label: 'World News' },
+    { value: 'Local News', label: 'Local News' },
+    { value: 'Crime', label: 'Crime' },
+    { value: 'Education', label: 'Education' },
+    { value: 'Culture', label: 'Culture' },
+    { value: 'Opinion', label: 'Opinion' },
+    { value: 'Lifestyle', label: 'Lifestyle' },
+    { value: 'Travel', label: 'Travel' },
+    { value: 'Food', label: 'Food' },
+    { value: 'Finance', label: 'Finance' },
+    { value: 'Real Estate', label: 'Real Estate' },
+    { value: 'Weather', label: 'Weather' },
+    { value: 'Art', label: 'Art' },
+    { value: 'Music', label: 'Music' },
+    { value: 'Fashion', label: 'Fashion' }
+];
+
+
+const publisherOptions = [
+];
+  publisher.map( (element) => publisherOptions.push({value: element.name, label: element.name}))
 
   // console.log(tagsOption, publisherOption);
 
@@ -79,7 +109,7 @@ const AddArticle = () => {
         authorName: user.displayName,
         authorEmail: user.email,
         authorImage: user.photoURL,
-        posted: new Date(),
+        posted: moment().calendar(),
         image: result.data.data.display_url
       }
       console.log(articlesInfo);
@@ -105,7 +135,7 @@ const AddArticle = () => {
 
   };
 
-  
+  if(loader) return <div className=" h-screen w-full flex justify-center items-center"><Spinner color="purple" className=" w-16 h-16"></Spinner></div>
 
   return (
     //         like title,image file
