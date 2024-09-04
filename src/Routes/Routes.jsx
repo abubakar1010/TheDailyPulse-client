@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         {
           path: "/articleDetails/:id",
           element: <PrivateRoute><ArticleDetails /></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+          loader: ({params}) => fetch(`https://the-daily-pulse-server-six.vercel.app/news/${params.id}`)
         },
         {
           path: "/subscription",

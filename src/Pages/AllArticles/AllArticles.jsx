@@ -21,7 +21,7 @@ const AllArticles = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/news/status")
+      .get("https://the-daily-pulse-server-six.vercel.app/news/status")
       .then((res) => {
         setNews(res.data);
         setLoader(false);

@@ -9,7 +9,7 @@ const useNews = () => {
     const [loader, setLoader] = useState(true)
     
     useEffect(() => {
-    axios.get('http://localhost:5000/news/status')
+    axios.get('https://the-daily-pulse-server-six.vercel.app/news/status')
     .then( res => {
       setNews(res.data)
       setLoader(false)

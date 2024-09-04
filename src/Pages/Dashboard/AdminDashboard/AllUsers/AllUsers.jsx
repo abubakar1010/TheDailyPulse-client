@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import useAxiosSecure from "../../../../Hooks/useAxiosSecure/useAxiosSecure";
 import {
   Card,
   IconButton,
@@ -9,6 +8,7 @@ import {
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Swal from "sweetalert2";
 import { FaUsers } from "react-icons/fa6";
+import useAxiosSecure from "../../../../Hooks/useaxiosSecure/useaxiosSecure";
 
 const AllUsers = () => {
   const axiosSecure = useAxiosSecure();
