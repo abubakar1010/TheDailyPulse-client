@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Navbar,
   Typography,
@@ -7,13 +7,32 @@ import {
 } from "@material-tailwind/react";
 import Profile from "../../../Components/Profile/Profile";
 import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../../../Provider/AuthProvider";
+import useAdmin from "../../../Hooks/useAdmin/useAdmin";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic/useAxiosPublic";
+import useAuth from "../../../Hooks/UseAuth/useAuth";
 
 const NavBar = () => {
   const [openNav, setOpenNav] = React.useState(false);
-  const { user } = useContext(AuthContext);
+  const { user } = useAuth()
+  const [isAdmin] = useAdmin()
 
   // console.log(user);
+
+  const axiosPublic = useAxiosPublic()
+  const [ isPremium, setIsPremium] = useState(false)
+
+  useEffect(() => {
+
+      
+    axiosPublic.get(`/premiumUser/${user?.email}`)
+    .then( res => {
+      setIsPremium(res.data.isPremium)
+    }).catch( (error) => {
+      console.log(error);
+       
+    })
+  
+  },[axiosPublic, user?.email])
   
 
   React.useEffect(() => {
@@ -82,7 +101,7 @@ const NavBar = () => {
         My Articles
       </NavLink>}
 
-      {user?.email && <NavLink
+      {isAdmin && <NavLink
         className={({ isActive }) =>
           isActive
             ? "flex items-center border-b py-1 px-4 border-[#c79c60da] shadow-none  hover:duration-300 duration-300 font-medium"
@@ -93,7 +112,7 @@ const NavBar = () => {
         DashBoard
       </NavLink>}
 
-      { user?.email && <NavLink
+      { isPremium && <NavLink
         className={({ isActive }) =>
           isActive
             ? "flex items-center border-b py-1 px-4 border-[#c79c60da] shadow-none  hover:duration-300 duration-300 font-medium"
