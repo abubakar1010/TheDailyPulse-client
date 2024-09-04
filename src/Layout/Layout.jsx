@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
+import NavBar from "../Pages/Shared/NavBar/NavBar";
 import Footer from "../Pages/Shared/Footer/Footer";
-import NavigationBar from "../Shared/NavigationBar/NavigationBar";
 
 const Layout = () => {
 
@@ -15,7 +15,7 @@ const Layout = () => {
 
     return (
         <div>
-            <NavigationBar />
+            <NavBar />
             <Outlet/>
             <Footer />
         </div>

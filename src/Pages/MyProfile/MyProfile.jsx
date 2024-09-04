@@ -62,7 +62,7 @@ const MyProfile = () => {
             <div className=" text-center">
               <h1 className=" font-bold text-xl">About Me</h1>
               <p className=" text-justify px-12 mt-4">
-                {`As a passionate news blogger, I delve into a wide array of topics, from global events and political developments to technology trends and cultural shifts. My mission is to deliver timely, accurate, and engaging content that keeps you informed and helps you make sense of the ever-changing world around us.I pride myself on providing not just the headlines, but also the context and nuances behind the stories. Whether it’s a breaking news update, a thoughtful opinion piece, or an in-depth feature, I aim to offer a fresh perspective and a deeper understanding of the issues that matter most.`}
+                {`As a passionate news blogger, I delve into a wide array of topics, from global events and political developments to technology trends and cultural shifts. My mission is to deliver timely, accurate, and engaging content that keeps you informed and helps you make sense of the ever-changing world around us.I pride myself on providing not just the headlines, but also the context and nuances behind the stories. `}
               </p>
             </div>
           </div>

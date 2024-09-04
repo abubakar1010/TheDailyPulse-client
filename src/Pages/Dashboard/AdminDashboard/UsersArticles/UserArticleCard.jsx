@@ -67,7 +67,7 @@ console.log(_id);
               className=" w-fit inline "
               value={status}
               color={
-                status === "paid"
+                status === "Approved"
                   ? "green"
                   : status === "pending"
                   ? "amber"

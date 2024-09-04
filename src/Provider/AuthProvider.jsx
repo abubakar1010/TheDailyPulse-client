@@ -41,12 +41,14 @@ import {
   
     useEffect(() => {
       const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-          // console.log(currentUser)
+          console.log(currentUser)
         setUser(currentUser);
         setIsLoading(false);
         if(currentUser){
           //set jwt in client
-          const userInfo = {email: currentUser.email}
+          const userInfo = {
+            email: currentUser.email,
+          }
           axiosPublic.post('/jwt', userInfo)
           .then( res => {
             if(res.data.token){
