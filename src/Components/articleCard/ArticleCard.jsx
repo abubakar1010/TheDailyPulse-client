@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const ArticleCard = ({ item }) => {
-  console.log(item);
+  // console.log(item);
 
   const { _id, image, title, publisher, description } = item;
   return (

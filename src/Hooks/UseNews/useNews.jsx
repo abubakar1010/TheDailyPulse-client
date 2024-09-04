@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 
 const useNews = () => {
 
+  
+
     const [news, setNews] = useState([]);
     const [loader, setLoader] = useState(true)
-
-  useEffect(() => {
+    
+    useEffect(() => {
     axios.get('http://localhost:5000/news/status')
     .then( res => {
       setNews(res.data)
