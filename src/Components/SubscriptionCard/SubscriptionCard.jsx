@@ -27,11 +27,11 @@ function CheckIcon() {
   );
 }
 const SubscriptionCard = ({ item }) => {
-  const { type, features, duration } = item;
+  const { type, features, duration=2 } = item;
   console.log(item);
 
   return (
-    <div className=" my-24">
+    <div className=" my-24 flex justify-center items-center w-full">
       <Card
         color="gray"
         variant="gradient"
@@ -60,7 +60,7 @@ const SubscriptionCard = ({ item }) => {
             <span className="self-end text-4xl">/mo</span>
           </Typography>
         </CardHeader>
-        <CardBody className="p-0">
+        <CardBody className="p-0 min-h-[170px]">
           <ul className="flex flex-col gap-4">
             {features.map((item, index) => (
               <li key={index} className="flex items-center gap-4">
