@@ -5,6 +5,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import { MdWorkspacePremium } from "react-icons/md";
 
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
@@ -12,7 +13,7 @@ import { Link } from "react-router-dom";
 const ArticleCard = ({ item }) => {
   // console.log(item);
 
-  const { _id, image, title, publisher, description } = item;
+  const { _id, image, title, publisher, description, subscription } = item;
   return (
     <>
       <div>
@@ -27,9 +28,17 @@ const ArticleCard = ({ item }) => {
             <img src={image} className="h-[400px] w-full object-cover" />
           </CardHeader>
           <CardBody>
-            <Typography variant="h6" color="gray" className="mb-4 uppercase">
+            <div className=" flex items-center justify-between pb-4 ">
+            <Typography variant="h6" color="gray" className=" uppercase">
               {publisher}
             </Typography>
+            {
+              subscription && <div className=" text-4xl text-[#ff8400] flex items-center ">
+              <p className=" text-2xl">premium</p>
+              <MdWorkspacePremium />
+            </div>
+            }
+            </div>
             <Typography variant="h4" color="blue-gray" className="mb-2">
               {title.slice(0, 80)} .....
             </Typography>

@@ -1,4 +1,4 @@
-
+import { MdWorkspacePremium } from "react-icons/md";
 import {
     Card,
     CardHeader,
@@ -13,7 +13,7 @@ import {
   const TrendingCard = ({ item }) => {
     console.log(item);
   
-    const { _id, image, title, publisher, description } = item;
+    const { _id, image, title, publisher, description , subscription} = item;
     return (
       <>
         <div>
@@ -28,11 +28,19 @@ import {
               <img src={image} className="min-h-[260px] rounded-md w-full object-cover" />
             </CardHeader>
             <CardBody>
-              <Typography variant="h6" color="gray" className="mb-4 uppercase">
+              <div className=" flex justify-between items-center ">
+              <Typography variant="h6" color="gray" className=" uppercase">
                 {publisher}
               </Typography>
-              <Typography variant="h4" color="blue-gray" className="mb-4">
-                {title.slice(0, 80)} ......
+              {
+              subscription && <div className=" text-4xl text-[#ff8400] flex items-center ">
+              <p className=" text-xl">premium</p>
+              <MdWorkspacePremium />
+            </div>
+            }
+              </div>
+              <Typography variant="h4" color="blue-gray" className="my-4">
+                {title.slice(0, 20)} ......
               </Typography>
               <Typography color="gray" className="mb-8 font-normal ">
                 {description.slice(0, 200)} ........
