@@ -1,10 +1,8 @@
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
 import { Avatar, Chip } from "@material-tailwind/react";
 
-const UserArticleCard = ({ element, handleApproved }) => {
+const UserArticleCard = ({ element, handleApproved, handleDelete }) => {
   const {
-    bookId,
     authorName,
     authorEmail,
     title,
@@ -85,14 +83,14 @@ console.log(_id);
           <p onClick={() => handleApproved(_id, "Declined")} className=" cursor-pointer bg-[#FFAC3326] text-[#FFAC33] rounded-full px-6 py-1">
             Decline
           </p>
-          <p className=" bg-[#ec434331] text-[#ff4133] rounded-full px-6 py-1">
+          <p onClick={ () => handleDelete(_id)} className=" bg-[#ec434331] text-[#ff4133] rounded-full px-6 py-1 cursor-pointer">
             Delete
           </p>
-          <NavLink to={`/bookDetails/${bookId}`}>
-          <p className=" bg-[#328EFF26] text-[#328EFF] rounded-full px-6 py-1">
+         
+          <p onClick={() => handleApproved(_id, "premium")} className=" cursor-pointer bg-[#328EFF26] text-[#328EFF] rounded-full px-6 py-1">
             Make Premium
           </p>
-          </NavLink>
+          
         </div>
       </div>
     </div>
@@ -102,6 +100,8 @@ console.log(_id);
 UserArticleCard.propTypes = {
   element: PropTypes.object,
   handleApproved: PropTypes.func,
+  handleDelete: PropTypes.func,
+
 };
 
 export default UserArticleCard;
