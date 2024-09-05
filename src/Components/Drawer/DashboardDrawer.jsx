@@ -1,6 +1,5 @@
 import {
     Drawer,
-    Button,
     Typography,
     List,
     ListItem,
@@ -22,7 +21,7 @@ const DashboardDrawer = () => {
 
     return (
         <>
-      {/* <Button onClick={openDrawer}>Open Drawer</Button> */}
+
       <Drawer overlay={false} open={true} >
         <div className="mb-2 flex items-center justify-between p-4">
           <Typography variant="h5" color="blue-gray">
@@ -78,9 +77,6 @@ const DashboardDrawer = () => {
 
           
         </List>
-        <Button className="mt-3 ml-5" size="sm">
-          Documentation
-        </Button>
       </Drawer>
     </>
     );

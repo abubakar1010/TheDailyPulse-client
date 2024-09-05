@@ -46,7 +46,7 @@ const ArticleCard = ({ item }) => {
               {description.slice(0, 200)} ........
             </Typography>
             <Link to={`/articleDetails/${_id}`} className="inline-block">
-              <Button variant="text" className="flex items-center gap-2">
+              <Button variant="text" className="flex items-center gap-2 bg-gradient-to-r from-[#EB3678] to-[#FB773C] text-white">
                 Details
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

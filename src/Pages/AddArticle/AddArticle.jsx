@@ -210,7 +210,7 @@ const publisherOptions = [
                   />
                 </div>
               </div>
-              <Button type="submit" className="mt-6">
+              <Button type="submit" className="mt-6 bg-gradient-to-r from-[#EB3678] to-[#FB773C]">
                 Submit
               </Button>
             </form>

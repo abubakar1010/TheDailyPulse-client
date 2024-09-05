@@ -187,7 +187,7 @@ const AllUsers = () => {
                             ) : (
                               <>
                                 <IconButton
-                                  className=" bg-purple-600 p-3"
+                                  className=" bg-gradient-to-r from-[#EB3678] to-[#FB773C] p-3"
                                   onClick={() => handleMakeAdmin(_id)}
                                   variant="text"
                                 >

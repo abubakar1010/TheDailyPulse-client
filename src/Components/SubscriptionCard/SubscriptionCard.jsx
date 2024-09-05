@@ -36,7 +36,7 @@ const SubscriptionCard = ({ item }) => {
       <Card
         color="gray"
         variant="gradient"
-        className="w-full max-w-[20rem] p-8 !to-[#8f7070]"
+        className="w-full max-w-[20rem] p-8  !to-[#180161]"
       >
         <CardHeader
           floated={false}
@@ -79,7 +79,7 @@ const SubscriptionCard = ({ item }) => {
               <Button
                 size="lg"
                 color="white"
-                className="hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
+                className="bg-gradient-to-r from-[#EB3678] to-[#FB773C] hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
                 ripple={false}
                 fullWidth={true}
               >
@@ -91,7 +91,7 @@ const SubscriptionCard = ({ item }) => {
             <Button
               size="lg"
               color="white"
-              className="hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
+              className="bg-gradient-to-r from-[#EB3678] to-[#FB773C] hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
               ripple={false}
               fullWidth={true}
             >

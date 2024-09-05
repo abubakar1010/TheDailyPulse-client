@@ -133,7 +133,7 @@ import useAuth from "../../Hooks/UseAuth/useAuth";
 
             <button
               type="submit"
-              className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] w-full py-3 rounded-lg font-bold text-white text-xl"
+              className="mt-6 bg-gradient-to-r from-[#EB3678] to-[#FB773C] w-full py-3 rounded-lg font-bold text-white text-xl"
             >
               sign In
             </button>

@@ -10,7 +10,7 @@ const SubscriptionBanner = () => {
                 <p className=" text-lg uppercase font-medium mt-5 mb-3">
                   The New Standard Of Luxury With Every Purchase
                 </p>
-                <button className="  bg-gradient-to-r from-[#ff0000] to-[#FF8938] mt-8 py-2 px-5 font-bold text-lg rounded-md ">
+                <button className="  bg-gradient-to-r from-[#EB3678] to-[#FB773C] mt-8 py-2 px-5 font-bold text-lg rounded-md ">
                   Explore Now
                 </button>
               </div>

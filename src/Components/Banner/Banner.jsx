@@ -36,7 +36,7 @@ const Banner = () => {
             <h1 className="mt-6">{item?.title}</h1>
 
             <Link to={`articleDetails/${item?._id}`}>
-              <Button className=" my-6" color="purple">View Details</Button>
+              <Button className=" my-6 bg-gradient-to-r from-[#EB3678] to-[#FB773C]" >View Details</Button>
             </Link>
           </div>
         </div>

@@ -139,16 +139,11 @@ const MyProfile = () => {
             <div className=" ">
               <button
                 type="submit"
-                className="mt-6 bg-gradient-to-r from-[#ff0000] to-[#FF8938] px-12  py-3 rounded-lg font-bold text-white text-xl "
+                className="mt-6 bg-gradient-to-r from-[#EB3678] to-[#FB773C] px-12  py-3 rounded-lg font-bold text-white text-xl "
               >
                 Update
               </button>
-              <button
-                type="reset"
-                className="mt-6 hover:bg-gradient-to-r bg-white from-[#ff0000] to-[#FF8938] px-12 py-3 rounded-lg font-bold hover:text-white text-xl border border-[#FF8938] ml-7 duration-700 hover:duration-700 hover:delay-300 "
-              >
-                Reset
-              </button>
+             
             </div>
           </form>
         </div>

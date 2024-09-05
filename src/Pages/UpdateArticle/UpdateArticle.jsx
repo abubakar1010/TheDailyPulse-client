@@ -217,7 +217,7 @@ import useAxiosSecure from "../../Hooks/useaxiosSecure/useaxiosSecure";
                     />
                   </div>
                 </div>
-                <Button type="submit" className="mt-6">
+                <Button type="submit" className="bg-gradient-to-r from-[#EB3678] to-[#FB773C] mt-6">
                   Update
                 </Button>
               </form>

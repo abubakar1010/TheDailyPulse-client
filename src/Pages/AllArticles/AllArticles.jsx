@@ -74,7 +74,7 @@ const AllArticles = () => {
           <Button
             type="submit"
             size="sm"
-            className="!absolute right-1 top-1 rounded"
+            className="bg-gradient-to-r from-[#EB3678] to-[#FB773C] !absolute right-1 top-1 rounded"
           >
             search
           </Button>
@@ -82,7 +82,7 @@ const AllArticles = () => {
         <div>
         <Menu placement="bottom">
           <MenuHandler>
-            <Button>Filter</Button>
+            <Button className="bg-gradient-to-r from-[#EB3678] to-[#FB773C]">Filter</Button>
           </MenuHandler>
           <MenuList>
             {publisher.map((item) => (

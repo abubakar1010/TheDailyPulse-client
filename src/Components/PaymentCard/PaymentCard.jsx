@@ -162,7 +162,7 @@ const PaymentCard = () => {
                     containerProps={{ className: "mt-4" }}
                   />
                 </div>
-                <Button type="submit" size="lg">pay with paypal</Button>
+                <Button type="submit" className="bg-gradient-to-r from-[#EB3678] to-[#FB773C]" size="lg">pay with paypal</Button>
                 <Typography
                   variant="small"
                   color="gray"
