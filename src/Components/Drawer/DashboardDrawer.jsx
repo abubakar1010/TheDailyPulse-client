@@ -9,6 +9,7 @@ import {
 import { FaBook, FaLeanpub } from "react-icons/fa";
 import {  FaUsers } from "react-icons/fa6";
 import { IoIosHome } from "react-icons/io";
+import { MdSpaceDashboard } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 // import useAdmin from "../../Hooks/useAdmin/useAdmin";
 // import { TbBrandBooking } from "react-icons/tb";
@@ -37,6 +38,14 @@ const DashboardDrawer = () => {
             <IoIosHome className=" text-xl" />
             </ListItemPrefix>
               HOME
+          </ListItem>
+          </NavLink>
+            <NavLink to={"/dashboard"}>
+          <ListItem>
+            <ListItemPrefix>
+            <MdSpaceDashboard className=" text-xl" />
+            </ListItemPrefix>
+              DASHBOARD
           </ListItem>
           </NavLink>
           <NavLink to={"/dashboard/allUsers"}>
