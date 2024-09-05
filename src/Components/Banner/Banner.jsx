@@ -27,7 +27,7 @@ const Banner = () => {
       {news.slice(1,6).map((item) => (
         <div
           key={item?._id}
-          className=" w-full bg-cover  bg-center bg-no-repeat"
+          className=" h-[500px] w-full bg-cover  bg-center bg-no-repeat"
           style={{ backgroundImage: `url("${item?.image}")` }}
         >
           <img src={`${item?.image}`} alt="" />

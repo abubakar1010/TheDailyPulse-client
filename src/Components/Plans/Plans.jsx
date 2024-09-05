@@ -1,19 +1,7 @@
 import SubscriptionCard from "../SubscriptionCard/SubscriptionCard";
 
 const Plans = () => {
-  // const premiumFeatures = [
-  //     "Unlimited access on the web and in our apps",
-  //     "Unlimited Posts",
-  //     "Get All Premium News",
-  //     "Most comprehensive political and international coverage",
-  //   ];
 
-  //   const standardFeatures = [
-  //     "Unlimited access on the web and in our apps",
-  //     "24/7 live news updates",
-  //     "Interactive stories",
-  //     "political and international coverage",
-  //   ];
   const basicPremium = [
     "Ad-Free Reading",
     "Early Access to Articles",
@@ -40,7 +28,7 @@ const Plans = () => {
        {" View and manage the  distinct subscription plans offered on our platform. Access detailed information on each plan's features, pricing, and benefits."}
             </p>
       </div>
-      <div className=" lg:flex md:grid md:grid-cols-2 items-center lg:gap-12 lg:mb-24">
+      <div className=" lg:flex grid grid-cols-1 md:grid-cols-2 items-center lg:gap-12 gap-6 lg:mb-24">
       <SubscriptionCard
         item={{ type: "Basic", features: basicPremium, price: 29, duration:{value: 1}, isNavigate: true }}
       />
