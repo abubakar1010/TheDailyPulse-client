@@ -19,11 +19,13 @@ import PaymentCard from "../Components/PaymentCard/PaymentCard";
 import PremiumArticle from "../Pages/PremiumArticles/PremiumArticles";
 import UpdateArticle from "../Pages/UpdateArticle/UpdateArticle";
 import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path:'/',
@@ -81,6 +83,7 @@ const router = createBrowserRouter([
     {
       path: 'dashboard',
       element: <AdminRoute><Dashboard /></AdminRoute>,
+      errorElement: <ErrorPage />,
       children:[
         
         {
