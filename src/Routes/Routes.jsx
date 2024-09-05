@@ -18,6 +18,7 @@ import MyArticles from "../Pages/MyArticles/MyArticles";
 import PaymentCard from "../Components/PaymentCard/PaymentCard";
 import PremiumArticle from "../Pages/PremiumArticles/PremiumArticles";
 import UpdateArticle from "../Pages/UpdateArticle/UpdateArticle";
+import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
 
 const router = createBrowserRouter([
     {
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
       element: <AdminRoute><Dashboard /></AdminRoute>,
       children:[
         
+        {
+          path: '',
+          element: <AdminRoute><DashboardHome /></AdminRoute>
+        },
         {
           path: 'allUsers',
           element: <AdminRoute><AllUsers /></AdminRoute>
