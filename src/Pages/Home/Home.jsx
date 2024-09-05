@@ -1,5 +1,6 @@
 import Plans from "../../Components/Plans/Plans";
 import PublisherSlide from "../../Components/PublisherSlide/PublisherSlide";
+import Sponsored from "../../Components/Sponsored/Sponsored";
 import Statistic from "../../Components/Statistic/Statistic";
 import TrendingArticles from "../../Components/TrendingArticles/TrendingArticles";
 
@@ -13,6 +14,7 @@ const Home = () => {
             <PublisherSlide /> 
             <Statistic />
             <Plans />
+            <Sponsored />
         </div>
     );
 };
