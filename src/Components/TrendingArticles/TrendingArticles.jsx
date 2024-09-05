@@ -1,18 +1,21 @@
 import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import TrendingCard from "../TrendingCard/TrendingCard";
+import { Spinner } from "@material-tailwind/react";
 
 const TrendingArticles = () => {
 
     const axiosPublic =  useAxiosPublic()
 
-    const { data: news = [] } = useQuery({
+    const { data: news = [], isFetching } = useQuery({
         queryKey: ["news"],
         queryFn: async () => {
           const result = await axiosPublic.get("/trendingNews");
           return result.data;
         },
       });
+
+      if(isFetching) return <div className=" h-screen w-full flex justify-center items-center"><Spinner color="purple" className=" w-16 h-16"></Spinner></div>
 
     return (
         <div className=" grid grid-cols-3 gap-12 justify-center items-center my-24 w-full h-full ">

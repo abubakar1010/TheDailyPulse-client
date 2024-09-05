@@ -11,7 +11,7 @@ const useAdmin = () => {
     console.log(user);
     
 
-    const {data:isAdmin, isPending: isAdminLoading} = useQuery({
+    const {data:isAdmin, isLoading: isAdminLoading} = useQuery({
         queryKey: [user?.email, 'isAdmin'],
         queryFn: async() => {
             if(isLoading) return <div className=" flex justify-center items-center h-screen"><Spinner className=" w-16 h-16" color="purple" /></div>

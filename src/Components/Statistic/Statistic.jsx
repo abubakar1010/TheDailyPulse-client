@@ -2,12 +2,13 @@
 import CountUp from 'react-countup';
 import useAxiosPublic from '../../Hooks/useAxiosPublic/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
+import { Spinner } from '@material-tailwind/react';
 
 const Statistic = () => {
 
 
       const axiosPublic = useAxiosPublic()
-    const { data: users = [] } = useQuery({
+    const { data: users = [], isFetching } = useQuery({
         queryKey: ["users"],
         queryFn: async () => {
           const result = await axiosPublic.get("/length");
@@ -16,6 +17,8 @@ const Statistic = () => {
       });
 
       console.log(users);
+
+      if(isFetching) return <div className=" h-screen w-full flex justify-center items-center"><Spinner color="purple" className=" w-16 h-16"></Spinner></div>
       
 
     return (

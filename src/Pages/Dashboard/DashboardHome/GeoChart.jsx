@@ -20,7 +20,7 @@ const GeoChart = () => {
 
 
     return (
-        <div className=" w-full">
+        <div className=" w-full mb-28">
 
            <div className=" my-24">
            <h1 className=" text-3xl text-center font-medium text-[#0000009f] mb-5 "> Explore Our Global Presence</h1>

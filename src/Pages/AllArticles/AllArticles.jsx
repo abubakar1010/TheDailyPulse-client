@@ -56,6 +56,10 @@ const AllArticles = () => {
 
   return (
     <div>
+      <div className=" my-24">
+           <h1 className=" text-3xl text-center font-medium text-[#0000009f] mb-5 "> Manage All Articles</h1>
+           <p className="text-lg text-center font-medium text-[#0000009f]" >Discover our footprint across the world with an interactive map showcasing our locations, services, and impact in different regions. Click on each marker to learn more about our offerings in that area.</p>
+           </div>
       <form onSubmit={handleSearch} action="" className=" flex items-center justify-center gap-24 ">
         <div className="relative my-12  flex w-full max-w-[24rem]">
           <Input

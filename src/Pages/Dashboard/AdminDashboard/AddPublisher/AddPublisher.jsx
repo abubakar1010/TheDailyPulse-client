@@ -75,8 +75,7 @@ import useAxiosSecure from "../../../../Hooks/useaxiosSecure/useaxiosSecure";
     return (
 
       <>
-        <div className="flex justify-center items-center mb-12 flex-col w-full">
-          <div className=""></div>
+        <div className="flex justify-center items-center mb-12 my-12 w-full">
           <div className=" w-full  bg-[#F3F3F3] px-12 py-8 ">
             <Card color="transparent" className=" w-full" shadow={false}>
               <form
