@@ -31,7 +31,16 @@ const Plans = () => {
     "Customizable Alerts",
   ];
   return (
-    <div className=" flex items-center gap-12 my-24">
+    <div>
+      <div className=" mt-40 mb-4">
+        <h1 className=" text-3xl text-center font-medium text-[#0000009f]">
+        Subscription Plans Overview
+        </h1>
+        <p className="text-lg text-center mt-4 font-medium text-[#0000009f]">
+       {" View and manage the  distinct subscription plans offered on our platform. Access detailed information on each plan's features, pricing, and benefits."}
+            </p>
+      </div>
+      <div className=" flex items-center gap-12 mb-24">
       <SubscriptionCard
         item={{ type: "Basic", features: basicPremium, price: 29, duration:{value: 1}, isNavigate: true }}
       />
@@ -41,6 +50,7 @@ const Plans = () => {
       <SubscriptionCard
         item={{ type: "Premium Plus", features: premiumPlus, duration:{value: 1}, price: 699, isNavigate: true }}
       />
+    </div>
     </div>
   );
 };

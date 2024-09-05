@@ -23,7 +23,10 @@ const PublisherSlide = () => {
   return (
     <>
     <div>
-        <p className=" text-center mt-12 text-4xl font-bold">Our Publishers</p>
+        <h1 className=" text-[#0000009f] text-center mt-12 text-3xl font-bold">Our Publishers</h1>
+        <p className="text-lg text-center mt-4 font-medium text-[#0000009f]">
+        A comprehensive list of all publishers  on our platform. Access detailed information about each publisher, including their latest news and updates, and efficiently organize and update their profiles to ensure accurate and engaging content.
+            </p>
     </div>
       <div className=" my-24">
       <Swiper
