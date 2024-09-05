@@ -4,14 +4,13 @@ import {
   List,
   ListItem,
   ListItemPrefix,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 import { useState } from "react";
 import { FaBook, FaLeanpub } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa6";
 import { IoIosHome } from "react-icons/io";
-import { MdSpaceDashboard } from "react-icons/md";
+import { MdDashboard, MdSpaceDashboard } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 // import useAdmin from "../../Hooks/useAdmin/useAdmin";
 // import { TbBrandBooking } from "react-icons/tb";
@@ -25,7 +24,9 @@ const DashboardDrawer = () => {
   return (
     <>
       <div>
-      <Button className=" lg:hidden block" onClick={openDrawer}>Open Drawer</Button>
+      <div className=" lg:hidden block text-3xl pt-4 pl-6" onClick={openDrawer}>
+        <MdDashboard />
+      </div>
         <Drawer open={open}  overlay={false}>
           <div className="mb-2 flex items-center justify-between p-4">
             <Typography variant="h5" color="blue-gray">

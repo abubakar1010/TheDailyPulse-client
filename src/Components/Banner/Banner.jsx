@@ -24,10 +24,10 @@ const Banner = () => {
       interval={3000}
       infiniteLoop={true}
     >
-      {news.map((item) => (
+      {news.slice(1,6).map((item) => (
         <div
           key={item?._id}
-          className=" w-full h-[500px] bg-cover  bg-center bg-no-repeat"
+          className=" w-full bg-cover  bg-center bg-no-repeat"
           style={{ backgroundImage: `url("${item?.image}")` }}
         >
           <img src={`${item?.image}`} alt="" />
