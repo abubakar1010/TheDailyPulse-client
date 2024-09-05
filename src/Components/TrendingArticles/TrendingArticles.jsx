@@ -27,7 +27,7 @@ const TrendingArticles = () => {
         Stay updated with the latest and most popular news stories. This section showcases trending articles, allowing you to easily access and manage content that captures current interest and engagement. Keep your audience informed with the most relevant and impactful news.
             </p>
       </div>
-            <div className=" grid grid-cols-3 gap-12 justify-center items-center mb-24 w-full h-full ">
+            <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 justify-center items-center mb-24 w-full h-full ">
             {
                 news.map( (item) => <TrendingCard key={item._id} item={item} isTrending={"!flex-col !w-full !min-h-full"} />)
             }

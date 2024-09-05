@@ -49,7 +49,7 @@ const PublisherSlide = () => {
 
         {publisher.map((element) => (
           <SwiperSlide key={element._id} >
-            <div className=" flex items-center gap-4">
+            <div className=" lg:ml-0 ml-9 lg:flex items-center gap-4">
             <Avatar
             size="lg"
             variant="circular"
@@ -57,7 +57,7 @@ const PublisherSlide = () => {
             className="cursor-pointer"
             src={element.image}
           />
-          <p className=" text-2xl font-bold text-[#3d3d3d]">{element.name}</p>
+          <p className=" mt-2 lg:mt-0 text-2xl font-bold text-[#3d3d3d]">{element.name}</p>
             </div>
           </SwiperSlide>
         ))}

@@ -15,9 +15,9 @@ const Sponsored = () => {
         Sponsored Content
         </h1>
 
-        <div className=" grid gap-x-9 my-24 gap-y-12 grid-cols-3 justify-center items-center w-full ">
+        <div className=" grid lg:gap-x-9 my-24 gap-y-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center w-full ">
             {
-                news.slice(news.length - 6,6).map( item => <div className=" flex gap-4 " key={item.id}>
+                news.slice(news.length - 7,news.length).map( item => <div className=" flex gap-4 " key={item.id}>
                     <Avatar
             variant="square"
             size="xxl"

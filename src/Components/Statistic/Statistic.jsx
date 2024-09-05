@@ -24,7 +24,7 @@ const Statistic = () => {
 
   return (
     <div>
-      <div className=" mt-40 mb-12">
+      <div className=" lg:mt-40 lg:mb-12">
         <h1 className=" text-3xl text-center font-medium text-[#0000009f]">
         User Statistics Overview
         </h1>
@@ -34,7 +34,7 @@ const Statistic = () => {
       </div>
 
       <div className=" flex justify-center items-center my-24">
-        <div className=" bg-gradient-to-r from-[#dc02ce] via-[#7c3ff2] to-[#5c53fe] text-white text-3xl font-bold max-w-[1350px] flex gap-12 py-24 px-12 text-center ">
+        <div className=" bg-gradient-to-r from-[#dc02ce] via-[#7c3ff2] to-[#5c53fe] text-white text-lg lg:text-3xl font-bold max-w-[1350px] flex lg:gap-12 lg:py-24 lg:px-12 py-6 px-8 text-center ">
           <div className=" space-y-3">
             <CountUp enableScrollSpy={true} end={users.totalUsers} />
             <p>Total Users</p>

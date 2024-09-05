@@ -40,7 +40,7 @@ const Plans = () => {
        {" View and manage the  distinct subscription plans offered on our platform. Access detailed information on each plan's features, pricing, and benefits."}
             </p>
       </div>
-      <div className=" flex items-center gap-12 mb-24">
+      <div className=" lg:flex md:grid md:grid-cols-2 items-center lg:gap-12 lg:mb-24">
       <SubscriptionCard
         item={{ type: "Basic", features: basicPremium, price: 29, duration:{value: 1}, isNavigate: true }}
       />
