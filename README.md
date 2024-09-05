@@ -1,8 +1,25 @@
-# React + Vite
+<h1>Website Name:Cooking</h1>
+<p>Requirement Type: assignment_category_0005</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+</br>
 
-Currently, two official plugins are available:
+Website Link: <a href="https://restaurant-management-89e37.web.app" target="_blank">The Daily Pulse</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</br>
+
+
+<h1>Website Features:</h1>
+
+</br>
+
+<ol>
+  <li>Engaging User Interaction</li>
+  <li>User and Article Management with Role-Based Features</li>
+  <li>Admin Dashboard with Dynamic Charts</li>
+  <li>Subscription Features</li>
+  <li>JWT Authentication and Protected Routes: Secure private routes using JWT authentication.</li>
+
+</ol>
+
+
+
