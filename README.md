@@ -3,7 +3,7 @@
 
 </br>
 
-Website Link: <a href="https://restaurant-management-89e37.web.app" target="_blank">The Daily Pulse</a>
+Website Link: <a href="https://thedailypulse-d0a33.web.app/" target="_blank">The Daily Pulse</a>
 
 </br>
 
