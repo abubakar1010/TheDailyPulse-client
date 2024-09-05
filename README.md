@@ -1,5 +1,5 @@
-<h1>Website Name:Cooking</h1>
-<p>Requirement Type: assignment_category_0005</p>
+<h1>Website Name: The Daily Pulse</h1>
+<p>Requirement Type: assignment_category_00013</p>
 
 </br>
 
