@@ -1,3 +1,4 @@
+import Banner from "../../Components/Banner/Banner";
 import Plans from "../../Components/Plans/Plans";
 import PublisherSlide from "../../Components/PublisherSlide/PublisherSlide";
 import Sponsored from "../../Components/Sponsored/Sponsored";
@@ -10,6 +11,7 @@ const Home = () => {
     
     return (
         <div>
+            <Banner />
             <TrendingArticles />
             <PublisherSlide /> 
             <Statistic />
