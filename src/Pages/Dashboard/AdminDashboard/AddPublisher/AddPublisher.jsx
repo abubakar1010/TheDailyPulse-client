@@ -45,7 +45,8 @@ import useAxiosSecure from "../../../../Hooks/useaxiosSecure/useaxiosSecure";
       if(result.data.success){
           const publisherInfo = {
           name: itemInfo.name,
-          image: result.data.data.display_url
+          image: result.data.data.display_url,
+          totalNews: 0
         }
         console.log(publisherInfo);
   
