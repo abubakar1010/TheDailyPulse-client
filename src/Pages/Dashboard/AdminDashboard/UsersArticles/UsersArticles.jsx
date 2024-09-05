@@ -3,6 +3,7 @@ import UserArticleCard from "./UserArticleCard";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../Hooks/useaxiosSecure/useaxiosSecure";
 import { Spinner } from "@material-tailwind/react";
+import { Helmet } from "react-helmet-async";
 
 const UserArticles = () => {
   const axiosSecure = useAxiosSecure();
@@ -90,6 +91,9 @@ const UserArticles = () => {
 
   return (
     <>
+          <Helmet>
+        <title>Users Articles | The Daily Pulse </title>
+      </Helmet>
       <div>
         <div className=" my-12">
           <h1 className=" text-3xl text-center font-medium text-[#0000009f]">

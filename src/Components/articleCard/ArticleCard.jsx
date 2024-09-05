@@ -18,7 +18,7 @@ const ArticleCard = ({ item }) => {
     <>
       <div>
         <Card
-          className={`w-full max-w-[48rem] flex h-[740px]`}
+          className={`w-full max-w-[48rem] flex md:h-[800px] xl:h-[740px]`}
         >
           <CardHeader
             shadow={false}

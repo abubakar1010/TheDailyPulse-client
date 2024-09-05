@@ -32,7 +32,7 @@ const SubscriptionCard = ({ item }) => {
   console.log(item);
 
   return (
-    <div className=" my-24 flex justify-center items-center w-full">
+    <div className=" lg:my-24 flex justify-center items-center w-full">
       <Card
         color="gray"
         variant="gradient"

@@ -1,6 +1,7 @@
 import { Chart } from "react-google-charts";
 import usePublisher from "../../../Hooks/usePublisher/usePublisher";
 import GeoChart from "./GeoChart";
+import { Helmet } from "react-helmet-async";
 
 const DashboardHome = () => {
   const [publisher] = usePublisher();
@@ -22,6 +23,9 @@ const DashboardHome = () => {
   value.unshift(["Total News", "News per Publisher"]);
   return (
     <>
+          <Helmet>
+        <title>Dashboard | The Daily Pulse </title>
+      </Helmet>
       <div className=" w-full">
         <div className=" w-full">
           <div className=" my-24">

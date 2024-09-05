@@ -5,7 +5,7 @@ import DashboardDrawer from "../Components/Drawer/DashboardDrawer";
 const Dashboard = () => {
     return (
         <>
-            <div className=" flex">
+            <div className=" lg:flex">
             <div className=" min-w-[300px]">
             <DashboardDrawer />
             </div>

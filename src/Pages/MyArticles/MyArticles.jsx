@@ -71,10 +71,11 @@ const MyArticles = () => {
   return (
     <>
     <Helmet>
-        <title>The Daily Pulse | MyArticles</title>
+        <title> MyArticles | The Daily Pulse</title>
       </Helmet>
-      <Card className="h-full w-full">
-        <CardBody className="overflow-scroll px-0">
+      <Card className="h-full w-full my-12">
+        <CardBody className="overflow-x-auto lg:overflow-hidden
+         px-0">
           <table className="w-full min-w-max table-auto text-left">
             <thead>
               <tr>

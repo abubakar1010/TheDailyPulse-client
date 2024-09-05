@@ -5,6 +5,7 @@ import SubscriptionBanner from "../../Components/SubscriptionBanner/Subscription
 import SubscriptionCard from "../../Components/SubscriptionCard/SubscriptionCard";
 import Select from "react-select";
 import { Typography } from "@material-tailwind/react";
+import { Helmet } from "react-helmet-async";
 
 const Subscription = () => {
   const basicPremium = [
@@ -36,6 +37,9 @@ const Subscription = () => {
 
   return (
     <>
+          <Helmet>
+        <title>Subscription | The Daily Pulse </title>
+      </Helmet>
       <SubscriptionBanner />
 
       <div>
@@ -49,7 +53,7 @@ const Subscription = () => {
           options={durations}
         />
       </div>
-      <div className=" flex justify-center items-center gap-24 ">
+      <div className=" my-12 lg:flex md:grid md:grid-cols-2 justify-center items-center gap-12 lg:gap-24 ">
 
          <SubscriptionCard
         item={{ type: "Basic", price: 29, features: basicPremium, duration, isNavigate: false }}

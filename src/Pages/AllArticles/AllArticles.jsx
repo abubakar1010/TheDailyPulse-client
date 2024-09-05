@@ -12,6 +12,7 @@ import usePublisher from "../../Hooks/usePublisher/usePublisher";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
+import { Helmet } from "react-helmet-async";
 
 const AllArticles = () => {
   const [publisher] = usePublisher();
@@ -56,6 +57,9 @@ const AllArticles = () => {
 
   return (
     <div>
+            <Helmet>
+        <title>All Article | The Daily Pulse </title>
+      </Helmet>
       <div className=" my-24">
            <h1 className=" text-3xl text-center font-medium text-[#0000009f] mb-5 "> Manage All Articles</h1>
            <p className="text-lg text-center font-medium text-[#0000009f]" >Discover our footprint across the world with an interactive map showcasing our locations, services, and impact in different regions. Click on each marker to learn more about our offerings in that area.</p>
@@ -99,7 +103,7 @@ const AllArticles = () => {
       </form>
 
 
-      <div className=" grid grid-cols-2 justify-center items-center my-12 gap-12">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 justify-center items-center my-12 gap-12">
         {news.map((item) => (
           <ArticleCard key={item?._id} item={item} />
         ))}

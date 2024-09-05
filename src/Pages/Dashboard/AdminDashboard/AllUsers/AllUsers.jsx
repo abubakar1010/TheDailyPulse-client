@@ -10,6 +10,7 @@ import { RiDeleteBin6Fill } from "react-icons/ri";
 import Swal from "sweetalert2";
 import { FaUsers } from "react-icons/fa6";
 import useAxiosSecure from "../../../../Hooks/useaxiosSecure/useaxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const AllUsers = () => {
   const axiosSecure = useAxiosSecure();
@@ -109,9 +110,11 @@ const AllUsers = () => {
 
   return (
     <>
-     <div className=" w-full" >
-
-     <div className=" my-12">
+      <Helmet>
+        <title>All User | The Daily Pulse </title>
+      </Helmet>
+      <div className=" w-full">
+        <div className=" my-12">
           <h1 className=" text-3xl text-center font-medium text-[#0000009f]">
             Manage All Users
           </h1>
@@ -120,103 +123,102 @@ const AllUsers = () => {
           </p>
         </div>
 
-     <div className=" w-full text-center ">
-        <div className=" w-full text-center my-12 space-y-8">
-
-          <div>
-            <Card className="h-full w-full">
-              <table className="w-full min-w-max table-auto text-left">
-                <thead>
-                  <tr>
-                    {TABLE_HEAD.map((head) => (
-                      <th
-                        key={head}
-                        className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
-                      >
-                        <Typography
-                          variant="small"
-                          color="blue-gray"
-                          className="font-normal leading-none opacity-70"
+        <div className=" w-full text-center ">
+          <div className=" w-full text-center my-12 space-y-8">
+            <div>
+              <Card className="h-full w-full overflow-auto">
+                <table className="w-full min-w-max table-auto text-left">
+                  <thead>
+                    <tr>
+                      {TABLE_HEAD.map((head) => (
+                        <th
+                          key={head}
+                          className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
                         >
-                          {head}
-                        </Typography>
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {users.map(({ _id, name, email, role = "user" }, index) => {
-                    const isLast = index === users.length - 1;
-                    const classes = isLast
-                      ? "p-4"
-                      : "p-4 border-b border-blue-gray-50";
+                          <Typography
+                            variant="small"
+                            color="blue-gray"
+                            className="font-normal leading-none opacity-70"
+                          >
+                            {head}
+                          </Typography>
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {users.map(({ _id, name, email, role = "user" }, index) => {
+                      const isLast = index === users.length - 1;
+                      const classes = isLast
+                        ? "p-4"
+                        : "p-4 border-b border-blue-gray-50";
 
-                    return (
-                      <tr key={name}>
-                        <td className={classes}>
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal"
-                          >
-                            {index + 1}
-                          </Typography>
-                        </td>
-                        <td className={classes}>
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal"
-                          >
-                            {name}
-                          </Typography>
-                        </td>
-                        <td className={classes}>
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal"
-                          >
-                            {email}
-                          </Typography>
-                        </td>
-                        <td className={classes}>
-                          <Tooltip content="User">
-                            {role === "admin" ? (
-                              "admin"
-                            ) : (
-                              <>
-                                <IconButton
-                                  className=" bg-gradient-to-r from-[#EB3678] to-[#FB773C] p-3"
-                                  onClick={() => handleMakeAdmin(_id)}
-                                  variant="text"
-                                >
-                                  <FaUsers className="!text-white text-xl  " />
-                                </IconButton>
-                              </>
-                            )}
-                          </Tooltip>
-                        </td>
-                        <td className={classes}>
-                          <Tooltip content="Delete Item">
-                            <IconButton
-                              onClick={() => handleDelete(_id)}
-                              variant="text"
+                      return (
+                        <tr key={name}>
+                          <td className={classes}>
+                            <Typography
+                              variant="small"
+                              color="blue-gray"
+                              className="font-normal"
                             >
-                              <RiDeleteBin6Fill className="!text-red-600 text-xl  " />
-                            </IconButton>
-                          </Tooltip>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </Card>
+                              {index + 1}
+                            </Typography>
+                          </td>
+                          <td className={classes}>
+                            <Typography
+                              variant="small"
+                              color="blue-gray"
+                              className="font-normal"
+                            >
+                              {name}
+                            </Typography>
+                          </td>
+                          <td className={classes}>
+                            <Typography
+                              variant="small"
+                              color="blue-gray"
+                              className="font-normal"
+                            >
+                              {email}
+                            </Typography>
+                          </td>
+                          <td className={classes}>
+                            <Tooltip content="User">
+                              {role === "admin" ? (
+                                "admin"
+                              ) : (
+                                <>
+                                  <IconButton
+                                    className=" bg-gradient-to-r from-[#EB3678] to-[#FB773C] p-3"
+                                    onClick={() => handleMakeAdmin(_id)}
+                                    variant="text"
+                                  >
+                                    <FaUsers className="!text-white text-xl  " />
+                                  </IconButton>
+                                </>
+                              )}
+                            </Tooltip>
+                          </td>
+                          <td className={classes}>
+                            <Tooltip content="Delete Item">
+                              <IconButton
+                                onClick={() => handleDelete(_id)}
+                                variant="text"
+                              >
+                                <RiDeleteBin6Fill className="!text-red-600 text-xl  " />
+                              </IconButton>
+                            </Tooltip>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
-     </div>
     </>
   );
 };

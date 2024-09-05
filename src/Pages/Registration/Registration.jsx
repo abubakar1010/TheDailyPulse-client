@@ -13,6 +13,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic/useAxiosPublic";
 import GoogleLogin from "../../Components/SocialLoign/GoogleLogin";
+import { Helmet } from "react-helmet-async";
 
 const Registration = () => {
 
@@ -86,6 +87,9 @@ const Registration = () => {
 
     return (
         <>
+              <Helmet>
+        <title>Register | The Daily Pulse </title>
+      </Helmet>
             <div className=" my-12 flex justify-center items-center">
 
             <Card color="transparent" shadow={false}>

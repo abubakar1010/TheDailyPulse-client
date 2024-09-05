@@ -19,6 +19,7 @@ import {
   import moment from "moment";
 import { useParams } from "react-router-dom";
 import useAxiosSecure from "../../Hooks/useaxiosSecure/useaxiosSecure";
+import { Helmet } from "react-helmet-async";
   
   const image_hoisting_key = import.meta.env.VITE_IMAGE_HOISTING_KEY;
   const image_upload_api = `https://api.imgbb.com/1/upload?key=${image_hoisting_key}`;
@@ -145,9 +146,11 @@ import useAxiosSecure from "../../Hooks/useaxiosSecure/useaxiosSecure";
     if(loader) return <div className=" h-screen w-full flex justify-center items-center"><Spinner color="purple" className=" w-16 h-16"></Spinner></div>
   
     return (
-      //         like title,image file
-      // field,publisher,tags, description and a submit button
+
       <>
+            <Helmet>
+        <title>Update Article | The Daily Pulse </title>
+      </Helmet>
         <div className="flex justify-center items-center mb-12 flex-col w-full">
           <div className=""></div>
           <div className=" w-full  bg-[#F3F3F3] px-12 py-8 ">
